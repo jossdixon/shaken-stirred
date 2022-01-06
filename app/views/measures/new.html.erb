@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Add a Measure</h1>
+  <%= link_to "Back to Cocktails", cocktail_path(@cocktail) %>
+</div>
+<div class="container">
+  <h2>What's the measure?</h2>
+  <%= simple_form_for [@cocktail, @measure] do |m| %>
+    <%= m.association :ingredient %>
+    <%= m.input :name %>
+    <%= m.input :description %>
+    <%= m.submit "Pour in" %>
+  <% end %>
+</div>

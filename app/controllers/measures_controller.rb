@@ -9,7 +9,7 @@ class MeasuresController < ApplicationController
     @measure = Measure.new(measure_params)
     @measure.cocktail = @cocktail
     if @measure.save
-      redirect_to measure_path(@measure)
+      redirect_to cocktail_path(@measure.cocktail)
     else
       render :new
     end
@@ -18,7 +18,7 @@ class MeasuresController < ApplicationController
   private
 
   def measure_params
-    params.require(:measure).permit(:name, :comment, :ingredient_id)
+    params.require(:measure).permit(:description, :ingredient_id)
   end
 
 end

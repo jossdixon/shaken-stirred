@@ -2,4 +2,7 @@
   <h1><%= @cocktail.name %></h1>
   <p><%= @cocktail.description %></p>
   <%= link_to "What's in this?", new_cocktail_measure_path(@cocktail) %>
+  <% @cocktail.measures.each do |measure| %>
+    <p><%= measure.ingredient.name %>, <%= measure.description %></p>
+  <% end %>
 </div>

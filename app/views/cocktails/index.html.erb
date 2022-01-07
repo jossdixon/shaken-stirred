@@ -1,9 +1,13 @@
 <%= render 'shared/navbar' %>
-<div class="container">
+<div class="subhead">
   <p>Cocktails</p>
+</div>
+<div class="container">
   <% @cocktails.each do |drink| %>
-    <%= drink.name %>
-    <%= drink.description %>
-  <% end %>
+    <div class="card-trip">
+      <%= drink.name %>
+      <%= drink.description %>
+    <% end %>
+  </div>
   <%= link_to "Add a Cocktail", new_cocktail_path %>
 </div>

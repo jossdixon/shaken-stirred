@@ -1,11 +1,16 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: $blue;
+  background: $gray;
   color: $beige;
+  border-bottom: 4px solid $red;
   a {
     font-weight: bold;
-    color: $red;
+    color: $beige;
   }
+}
+
+.navbar-lewagon .nav-item-active .nav-link {
+  color: $beige;
 }
 
 .navbar-lewagon .navbar-collapse {

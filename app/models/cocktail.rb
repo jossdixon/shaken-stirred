@@ -4,4 +4,5 @@ class Cocktail < ApplicationRecord
 
   has_many :measures, dependent: :destroy
   has_many :ingredients, through: :measures
+  has_one_attached :photo
 end

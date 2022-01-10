@@ -12,7 +12,7 @@
   <div class="form-box">
     <%= simple_form_for [@cocktail, @measure] do |m| %>
       <%= m.association :ingredient, input_html: { class: 'form-input'} %>
-      <%= m.input :description %>
+      <%= m.input :description, input_html: { class: 'form-input'} %>
       <%= m.submit "Pour in", class:"btn btn-pour" %>
     <% end %>
   </div>

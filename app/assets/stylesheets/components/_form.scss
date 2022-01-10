@@ -8,4 +8,9 @@
 .form-input {
   outline: none !important;
   border-radius: 0;
+  border: 2px solid $gray;
+  transition: 0.5s;
+  &:hover {
+    border: 2px solid $blue;
+  }
 }

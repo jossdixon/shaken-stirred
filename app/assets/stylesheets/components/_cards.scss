@@ -63,14 +63,23 @@
   background-size: cover;
   background-position: center;
   height: 180px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  padding: 16px;
   color: $beige;
   font-size: 24px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   box-shadow: 8px 8px 0px $gray;
+  .title {
+    font-weight: bold;
+    font-size: 24px;
+  }
+  .caption {
+    font-size: 16px;
+    font-weight: normal;
+  }
 }
 
 
@@ -78,6 +87,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  margin: 16px;
 }
 
 // Smallest device

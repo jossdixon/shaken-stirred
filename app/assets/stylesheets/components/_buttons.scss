@@ -5,7 +5,19 @@
   color: $beige;
   transition: 0.5s;
   &:hover {
-    background-color: $beige;
+    background-color: $blue;
     color: $gray;
+  }
+}
+
+.btn-pour {
+  border-radius: 0;
+  border: 2px solid $gray;
+  background-color: $yellow;
+  transition: 0.5s;
+  &:hover {
+    border: 2px solid $yellow;
+    color: $yellow;
+    background-color: $blue;
   }
 }

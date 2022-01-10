@@ -1,11 +1,23 @@
-<div class="container">
-  <div class="subhead">
-    <h1><%= @cocktail.name %></h1>
-    <%= link_to "Back to Cocktails", cocktails_path %>
+<div class="subhead">
+  <div class="subhead-title">
+    <p><%= @cocktail.name %></p>
   </div>
-  <p><%= @cocktail.description %></p>
-  <%= link_to "What's in this?", new_cocktail_measure_path(@cocktail) %>
-  <% @cocktail.measures.each do |measure| %>
-    <p><%= measure.ingredient.name %>, <%= measure.description %></p>
-  <% end %>
+  <div class="d-flex">
+    <%= link_to "Add a Measure", new_cocktail_measure_path(@cocktail), class:"btn btn-main" %>
+    <%= link_to "Back to Cocktails", cocktails_path, class:"btn btn-main" %>
+  </div>
+</div>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path(@cocktail.photo.key) %>);">
+  <div class="container">
+    <p> <%= @cocktail.description %></p>
+  </div>
+</div>
+<div class="container">
+  <div class="cards">
+    <% @cocktail.measures.each do |measure| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://unsplash.com/s/photos/<%= measure.name %>)">
+        <p><%= measure.ingredient.name %>, <%= measure.description %></p>
+      </div>
+    <% end %>
+  </div>
 </div>

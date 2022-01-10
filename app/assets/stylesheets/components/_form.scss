@@ -1,0 +1,11 @@
+.form-box {
+  background-color: $yellow;
+  box-shadow: 8px 8px 0px $gray;
+  padding: 16px;
+  margin-top: 32px;
+}
+
+.form-input {
+  outline: none !important;
+  border-radius: 0;
+}

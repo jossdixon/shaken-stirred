@@ -1,12 +1,19 @@
-<div class="container">
-  <h1>Add a Measure</h1>
-  <%= link_to "Back to Cocktail", cocktail_path(@cocktail)%>
+<div class="subhead">
+  <div class="subhead-title">
+    <p>Add a Measure</p>
+  </div>
+  <div class="d-flex">
+    <%= link_to "Back to Cocktail", cocktail_path(@cocktail), class:"btn btn-main"%>
+  </div>
 </div>
 <div class="container">
-  <h2>What's the measure?</h2>
-  <%= simple_form_for [@cocktail, @measure] do |m| %>
-    <%= m.association :ingredient %>
-    <%= m.input :description %>
-    <%= m.submit "Pour in" %>
-  <% end %>
+</div>
+<div class="container">
+  <div class="form-box">
+    <%= simple_form_for [@cocktail, @measure] do |m| %>
+      <%= m.association :ingredient, input_html: { class: 'form-input'} %>
+      <%= m.input :description %>
+      <%= m.submit "Pour in", class:"btn btn-pour" %>
+    <% end %>
+  </div>
 </div>

@@ -1,6 +1,8 @@
+<div class="subhead">
+  <p>Add a Cocktail</p>
+  <%= link_to "Back to Cocktails", cocktails_path, class: "btn btn-main" %>
+</div>
 <div class="container">
-  <h1>New Cocktail</h1>
-  <h2>What's the drink?</h2>
   <%= simple_form_for @cocktail do |c| %>
     <%= c.input :name %>
     <%= c.input :description %>

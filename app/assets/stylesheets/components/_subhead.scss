@@ -3,7 +3,8 @@
   font-weight: bold;
   background-color: $yellow;
   padding-left: 30px;
-  text-align: left;
+  display: flex;
+  justify-content: space-between;
   p {
     margin: 0;
   }

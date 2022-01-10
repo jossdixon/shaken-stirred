@@ -1,0 +1,11 @@
+.btn-main {
+  border-radius: 0px;
+  padding: 16px;
+  background-color: $red;
+  color: $beige;
+  transition: 0.5s;
+  &:hover {
+    background-color: $beige;
+    color: $gray;
+  }
+}

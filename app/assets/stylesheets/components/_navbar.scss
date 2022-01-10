@@ -3,9 +3,16 @@
   background: $gray;
   color: $beige;
   border-bottom: 4px solid $red;
+  h1 {
+    font-size: 24px;
+  }
   a {
     font-weight: bold;
     color: $beige;
+    transition: 0.5s;
+    &:hover {
+      color: $blue;
+    }
   }
 }
 

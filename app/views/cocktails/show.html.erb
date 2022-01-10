@@ -1,6 +1,8 @@
 <div class="container">
-  <h1><%= @cocktail.name %></h1>
-  <%= link_to "Back to Cocktails", cocktails_path %>
+  <div class="subhead">
+    <h1><%= @cocktail.name %></h1>
+    <%= link_to "Back to Cocktails", cocktails_path %>
+  </div>
   <p><%= @cocktail.description %></p>
   <%= link_to "What's in this?", new_cocktail_measure_path(@cocktail) %>
   <% @cocktail.measures.each do |measure| %>

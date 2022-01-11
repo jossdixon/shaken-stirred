@@ -12,6 +12,8 @@
   box-shadow: 4px 4px 0px $gray;
   margin: 16px;
   position: relative;
+  border-left: 2px solid $blue;
+  border-top: 2px solid $blue;
   transition: 0.5s;
   &:active {
     box-shadow: 2px 2px 0px $red;
@@ -71,6 +73,8 @@
   font-size: 24px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-left: 2px solid $blue;
+  border-top: 2px solid $blue;
   box-shadow: 4px 4px 0px $gray;
   .title {
     font-weight: bold;
@@ -87,6 +91,8 @@
   height: 120px;
   background-color: $yellow;
   color: $gray;
+  border-left: 2px solid $blue;
+  border-top: 2px solid $blue;
   box-shadow: 4px 4px 0px $gray;
   display: flex;
   align-items: center;

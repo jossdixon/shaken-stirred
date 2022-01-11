@@ -13,7 +13,9 @@ ingredients_list = URI.open(url).read
 ingredients = JSON.parse(ingredients_list)
 ing_array = []
 
-puts "Obliterating ingredients..."
+puts "Obliterating everything..."
+Measure.destroy_all
+Cocktail.destroy_all
 Ingredient.destroy_all
 
 puts 'Initializing seeding engines...'

@@ -13,12 +13,14 @@
   </div>
 </div>
 <div class="container">
-  <div class="cards">
-    <% @cocktail.measures.each do |measure| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(http://source.unsplash.com/featured/?<%= measure.ingredient.name %>)">
-        <p class="title"><%= measure.ingredient.name %></p>
+  <% @cocktail.measures.each do |measure| %>
+    <div class="card-product">
+      <%# style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://spoonacular.com/cdn/ingredients_100x100/<%= measure.ingredient.name %>
+      <img src="https://spoonacular.com/cdn/ingredients_100x100/<%= measure.tidy_up %>.jpg">
+      <div class="card-product-infos">
+        <h2><%= measure.ingredient.name %></h2>
         <p class="caption"><%= measure.description %></p>
       </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>

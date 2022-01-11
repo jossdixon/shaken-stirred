@@ -1,12 +1,18 @@
 <div class="subhead">
-  <p>Add a Cocktail</p>
-  <%= link_to "Back to Cocktails", cocktails_path, class: "btn btn-main" %>
+  <div class="subhead-title">
+    <p>Add a Cocktail</p>
+  </div>
+  <div class="d-flex">
+    <%= link_to "Back to Cocktails", cocktails_path, class: "btn btn-main" %>
+  </div>
 </div>
 <div class="container">
-  <%= simple_form_for @cocktail do |c| %>
-    <%= c.input :name %>
-    <%= c.input :description %>
-    <%= c.input :photo, as: :file %>
-    <%= c.submit "Add" %>
-  <% end %>
+  <div class="form-box">
+    <%= simple_form_for @cocktail do |c| %>
+      <%= c.input :name, input_html: { class: 'form-input'} %>
+      <%= c.input :description, input_html: { class: 'form-input'} %>
+      <%= c.input :photo, as: :file, input_html: { class:'' } %>
+      <%= c.submit "Add", class:'btn btn-pour' %>
+    <% end %>
+  </div>
 </div>

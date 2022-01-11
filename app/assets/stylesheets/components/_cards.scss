@@ -9,16 +9,16 @@
 .card-trip {
   overflow: hidden;
   background: $yellow;
-  box-shadow: 8px 8px 0px $gray;
+  box-shadow: 4px 4px 0px $gray;
   margin: 16px;
   position: relative;
   transition: 0.5s;
   &:active {
-    box-shadow: 4px 4px 0px $red;
+    box-shadow: 2px 2px 0px $red;
 
   }
   &:hover {
-    box-shadow: 4px 4px 0px $blue;
+    box-shadow: 2px 2px 0px $blue;
   }
 }
 
@@ -71,7 +71,7 @@
   font-size: 24px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  box-shadow: 8px 8px 0px $gray;
+  box-shadow: 4px 4px 0px $gray;
   .title {
     font-weight: bold;
     font-size: 24px;
@@ -81,6 +81,43 @@
     font-weight: normal;
   }
 }
+
+.card-product {
+  overflow: hidden;
+  height: 120px;
+  background-color: $yellow;
+  color: $gray;
+  box-shadow: 4px 4px 0px $gray;
+  display: flex;
+  align-items: center;
+  margin: 16px;
+}
+
+.card-product img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-family: 'Rubik';
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
+
 
 
 .cards {

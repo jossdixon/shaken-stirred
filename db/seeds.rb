@@ -11,9 +11,19 @@ require 'json'
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 ingredients_list = URI.open(url).read
 ingredients = JSON.parse(ingredients_list)
+ing_array = []
+
+puts "Obliterating ingredients..."
+Ingredient.destroy_all
 
 puts 'Initializing seeding engines...'
-ingredients['drinks'].each do |thing|
-  Ingredient.create(name: thing["strIngredient1"])
+ingredients['drinks'].each do |ingredient|
+  ing_array << ingredient["strIngredient1"]
 end
+
+ing_array.sort!
+ing_array.each do |ingredient|
+  Ingredient.create(name: ingredient)
+end
+
 puts 'Seeding completed.'

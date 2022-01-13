@@ -3,16 +3,18 @@
   <%= link_to "Add a Cocktail", new_cocktail_path, class: "btn btn-main" %>
 </div>
 <div class="container">
-  <% @cocktails.each do |cocktail| %>
-    <div class="card-trip">
-      <img src='<%= cl_image_path(cocktail.photo.key) %>'>
-      <div class="card-trip-infos">
-        <div>
-          <p id="card-header"><%= cocktail.name %></p>
-          <p><%= cocktail.description %></p>
+  <div class="cards">
+    <% @cocktails.each do |cocktail| %>
+      <div class="card-trip">
+        <img src='<%= cl_image_path(cocktail.photo.key) %>'>
+        <div class="card-trip-infos">
+          <div>
+            <p id="card-header"><%= cocktail.name %></p>
+            <p><%= cocktail.description %></p>
+          </div>
         </div>
+        <%= link_to '', cocktail_path(cocktail), class:'card-link' %>
       </div>
-      <%= link_to '', cocktail_path(cocktail), class:'card-link' %>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>

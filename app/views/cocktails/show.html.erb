@@ -15,8 +15,12 @@
 <div class="container">
   <% @cocktail.measures.each do |measure| %>
     <div class="card-product">
-      <%# style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://spoonacular.com/cdn/ingredients_100x100/<%= measure.ingredient.name %>
-      <img src="www.thecocktaildb.com/images/ingredients/<%= measure.tidy_up %>-Medium.png">
+      <div class="card-product-shop">
+        <%# style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://spoonacular.com/cdn/ingredients_100x100/<%= measure.ingredient.name %>
+        <%= link_to "https://www.google.com/search?q=#{measure.tidy_up}&tbm=shop", target: 'blank' do %>
+          <i class="fas fa-shopping-cart"></i>
+        <% end %>
+      </div>
       <div class="card-product-infos">
         <h2><%= measure.ingredient.name %></h2>
         <p class="caption"><%= measure.description %></p>

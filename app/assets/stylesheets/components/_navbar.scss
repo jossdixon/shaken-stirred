@@ -1,10 +1,12 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: $gray;
+  background: $red;
   color: $beige;
   border-bottom: 2px solid $red;
   h1 {
     font-size: 24px;
+    color: $beige;
+    margin-top: 8px;
   }
   a {
     font-weight: bold;
@@ -16,8 +18,16 @@
   }
 }
 
-.navbar-lewagon .nav-item-active .nav-link {
+.navbar-light .navbar-nav .nav-link {
   color: $beige;
+  &:hover {
+    color: $yellow;
+  }
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+  color: $gray;
+  border-left: 2px solid $gray;
 }
 
 .navbar-lewagon .navbar-collapse {

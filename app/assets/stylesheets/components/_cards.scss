@@ -92,6 +92,30 @@
   }
 }
 
+.card-measure {
+  height: 64px;
+  border-left: 2px solid $blue;
+  border-top: 2px solid $blue;
+  box-shadow: 4px 4px 0px $gray;
+  // display: flex;
+  // align-items: center;
+  margin: 16px;
+}
+
+.card-measure-title {
+  background-color: $blue;
+  color: $beige;
+  h2 {
+    font-family: 'Rubik';
+  }
+
+.card-measure-infos {
+  background-color: $beige;
+  padding-bottom: 16px;
+  line-height: 1rem;
+}
+
+}
 .card-product {
   overflow: hidden;
   height: 120px;
@@ -124,6 +148,12 @@
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
+}
+
+.card-product-title {
+  background-color: $blue;
+  color: $beige;
+  height: 100%;
 }
 
 .card-product .card-product-infos {

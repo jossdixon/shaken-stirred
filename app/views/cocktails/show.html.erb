@@ -30,16 +30,20 @@
     <% end %>
   </div>
   <div class="comments">
-    <% if @cocktail.comments.blank? %>
-      Be the first to say something about the <%= @cocktail.name %>.
-    <% else %>
-      <% @cocktail.comments.each do |comment| %>
-        <p id="comment-<%= comment.id %>"><%= comment.content %></p>
+    <div data-controller="insert-in-list">
+      <div data-insert-in-list-target="items">
+        <% if @cocktail.comments.blank? %>
+          Be the first to say something about the <%= @cocktail.name %>.
+        <% else %>
+          <% @cocktail.comments.each do |comment| %>
+            <p id="comment-<%= comment.id %>"><%= comment.content %></p>
+          <% end %>
+        <% end %>
+      </div>
+      <%= simple_form_for([@cocktail, @comment], remote: true, data: { insert_in_list_target: "form"}) do |f| %>
+        <%= f.input :content, as: :text, :label => false %>
+        <%= f.button :submit %>
       <% end %>
-    <% end %>
-    <%= simple_form_for([@cocktail, @comment], remote: true) do |f| %>
-      <%= f.input :content, as: :text, :label => false %>
-      <%= f.button :submit %>
-    <% end %>
+    </div>
   </div>
 </div>

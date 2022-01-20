@@ -37,5 +37,9 @@
         <p><%= comment.content %></p>
       <% end %>
     <% end %>
+    <%= simple_form_for([@cocktail, @comment]) do |f| %>
+      <%= f.input :content, as: :text %>
+      <%= f.button :submit %>
+    <% end %>
   </div>
 </div>

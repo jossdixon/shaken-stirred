@@ -40,7 +40,10 @@
           <% end %>
         <% end %>
       </div>
-      <%= simple_form_for([@cocktail, @comment], remote: true, data: { insert_in_list_target: "form"}) do |f| %>
+      <%= simple_form_for([@cocktail, @comment],
+          remote: true,
+          data: { insert_in_list_target: "form"},
+          action: "submit->insert-in-list#send") do |f| %>
         <%= f.input :content, as: :text, :label => false %>
         <%= f.button :submit %>
       <% end %>

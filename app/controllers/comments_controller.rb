@@ -12,7 +12,7 @@ class CommentsController < ApplicationController
 
   private
 
-  def cocktail_params
+  def comment_params
     params.require(:comment).permit(:content)
   end
 end

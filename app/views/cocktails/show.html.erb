@@ -34,7 +34,7 @@
       Be the first to say something about the <%= @cocktail.name %>.
     <% else %>
       <% @cocktail.comments.each do |comment| %>
-        <p><%= comment.content %></p>
+        <p id="comment-<%= comment.id %>"><%= comment.content %></p>
       <% end %>
     <% end %>
     <%= simple_form_for([@cocktail, @comment], remote: true) do |f| %>

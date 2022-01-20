@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   resources :cocktails, only: [:index, :show, :new, :create] do
     resources :measures, only: [:new, :create]
+    resources :comments, only: :create
   end
 end

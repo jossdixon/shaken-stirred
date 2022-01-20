@@ -37,11 +37,11 @@
           Be the first to say something about the <%= @cocktail.name %>.
         <% else %>
           <% @cocktail.comments.each do |comment| %>
-            <p id="comment-<%= comment.id %>"><%= comment.content %></p>
+            <%= render 'shared/_comment', comment: @comment %>
           <% end %>
         <% end %>
       </div>
-      <%= render 'shared/_comment_form' %>
+      <%= render 'shared/_comment_form', cocktail: @cocktail, comment: @comment %>
     </div>
   </div>
 </div>

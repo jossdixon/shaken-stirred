@@ -26,16 +26,16 @@
           <h2><%= measure.ingredient.name %></h2>
           <p class="caption"><%= measure.description %></p>
         </div>
-        <div class="comments">
-          <% if @cocktail.comments.blank? %>
-            Be the first to say something about the <%= cocktail.name %>.
-          <% else %>
-            <% @cocktail.comments.each do |comment| %>
-              <p><%= comment.content %></p>
-            <% end %>
-          <% end %>
-        </div>
       </div>
+    <% end %>
+  </div>
+  <div class="comments">
+    <% if @cocktail.comments.blank? %>
+      Be the first to say something about the <%= @cocktail.name %>.
+    <% else %>
+      <% @cocktail.comments.each do |comment| %>
+        <p><%= comment.content %></p>
+      <% end %>
     <% end %>
   </div>
 </div>

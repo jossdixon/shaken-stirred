@@ -1,4 +1,18 @@
 .comments {
-  border-top: 2px solid $gray;
+  background-color: $yellow;
+  color: $gray;
+  border-left: 2px solid $blue;
+  border-top: 2px solid $blue;
+  box-shadow: 4px 4px 0px $gray;
   padding: 16px;
+  h2 {
+    font-family: 'Rubik';
+  }
+}
+
+.comment-single {
+  margin: 8px;
+  padding: 4px 8px;
+  background-color: $beige;
+  color: $gray;
 }

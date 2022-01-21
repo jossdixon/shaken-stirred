@@ -3,13 +3,16 @@ class CommentsController < ApplicationController
     @cocktail = Cocktail.find(params[:cocktail_id])
     @comment = Comment.new(comment_params)
     @comment.cocktail = @cocktail
-    if @comment.save
-      format.html { redirect_to cocktail_path(@cocktail) }
-      format.json
-      # redirect_to cocktail_path(@cocktail, anchor: "comment-#{@comment.id}")
-    else
-      format.html { render 'cocktails/show' }
-      format.json
+
+    respond_to do |format|
+      if @comment.save
+        format.html { redirect_to cocktail_path(@cocktail) }
+        format.json
+        # redirect_to cocktail_path(@cocktail, anchor: "comment-#{@comment.id}")
+      else
+        format.html { render 'cocktails/show' }
+        format.json
+      end
     end
   end
 

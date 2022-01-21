@@ -37,7 +37,7 @@
           Be the first to say something about the <%= @cocktail.name %>.
         <% else %>
           <% @cocktail.comments.each do |comment| %>
-            <%= render 'shared/_comment', comment: @comment %>
+            <%= render 'shared/comment', comment: @comment %>
           <% end %>
         <% end %>
       </div>

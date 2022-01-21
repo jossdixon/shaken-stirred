@@ -31,7 +31,7 @@
   </div>
   <div class="comments">
     <h2>Cocktail Comments</h2>
-    <div data-controller="insert-in-list">
+    <div data-controller="insert-in-list" data-insert-in-list-position-value="beforeend">
       <div class="comments-list" data-insert-in-list-target="items">
         <% if @cocktail.comments.blank? %>
           Be the first to say something about the <%= @cocktail.name %>.

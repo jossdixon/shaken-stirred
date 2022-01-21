@@ -20,9 +20,10 @@ export default class extends Controller {
     })
     .then(response => response.json())
     .then((data) => {
-      this.itemsTarget.insertAdjacentHTML('beforeend', data.inserted_item)
+      if (data.inserted_item) {
+        this.itemsTarget.insertAdjacentHTML("beforeend", data.inserted_item)
+      }
       this.formTarget.outerHTML = data.form;
     })
   }
-
 }
